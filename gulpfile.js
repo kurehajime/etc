@@ -6,7 +6,7 @@ var replace = require('gulp-replace');
 var date=require('date-utils');
 
 
-gulp.task('colamone', function() {
+gulp.task('colamone', function(done) {
     var dt = new Date();
     var formatted = dt.toFormat("YYYYMMDDHH24MI");
     //index.html作成
@@ -38,9 +38,11 @@ gulp.task('colamone', function() {
         .pipe( gulp.dest( '../xiidec/static/colamone') )
         .pipe( gulp.dest( '../xiidec/static/colamone_beta') );
 
+    done();
+
 });
 gulp.task('watch', function() {
-  gulp.watch('../colamone_js/*', ['colamone']);
+  gulp.watch('../colamone_js/*', gulp.task('colamone'));
 });
 
-gulp.task('default', ['colamone']);
+gulp.task('default', gulp.series('colamone'));

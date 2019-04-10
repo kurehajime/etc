@@ -19,8 +19,8 @@
   "devDependencies": {
     "date-utils": "^1.2.21",
     "fs": "0.0.1-security",
-    "gulp": "^3.9.1",
-    "gulp-inline-source": "^3.2.0",
+    "gulp": "^4.0.0",
+    "gulp-inline-source": "^4.0.0",
     "gulp-replace": "^0.6.1",
     "gulp-uglify": "^3.0.2"
   }
