@@ -24,6 +24,7 @@ gulp.task('colamone', function() {
         .pipe( gulp.dest( '../xiidec/static/colamone') )
         .pipe( gulp.dest( '../xiidec/static/colamone_beta') );
     gulp.src( '../colamone_js/*.js'  )
+        .pipe(replace(/TIMESTAMP/g, formatted))
         .pipe(uglify())
         .pipe( gulp.dest( '../xiidec/static/colamone') )
         .pipe( gulp.dest( '../xiidec/static/colamone_beta') );
