@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var fs = require('fs');
 var inlinesource = require('gulp-inline-source');
-var uglify = require('gulp-uglify');
+var uglify = require('gulp-uglify-es').default;
 var replace = require('gulp-replace');
 var date=require('date-utils');
 
